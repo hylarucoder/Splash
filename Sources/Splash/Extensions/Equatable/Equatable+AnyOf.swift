@@ -7,11 +7,11 @@
 import Foundation
 
 extension Equatable {
-    func isAny(of candidates: Self...) -> Bool {
-        return candidates.contains(self)
-    }
+  func isAny(of candidates: Self...) -> Bool {
+    candidates.contains(self)
+  }
 
-    func isAny<S: Sequence>(of candidates: S) -> Bool where S.Element == Self {
-        return candidates.contains(self)
-    }
+  func isAny(of candidates: some Sequence<Self>) -> Bool {
+    candidates.contains(self)
+  }
 }

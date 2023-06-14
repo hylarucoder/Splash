@@ -8,9 +8,9 @@ import Foundation
 import Splash
 
 struct OutputFormatMock: OutputFormat {
-    let builder: OutputBuilderMock
+  let builder: OutputBuilderMock
 
-    func makeBuilder() -> OutputBuilderMock {
-        return builder
-    }
+  func makeBuilder() -> OutputBuilderMock {
+    builder
+  }
 }
